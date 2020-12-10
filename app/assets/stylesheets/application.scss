@@ -1,5 +1,8 @@
-@import 'boards';
+@import 'board';
 @import 'variables';
+@import 'form';
+@import 'button'; 
+@import 'header';
 
 html {
   word-spacing: 1px;
@@ -31,6 +34,7 @@ a {
 }
 
 .container {
+  position: relative;
   padding: 16px 16px;
   width: 100%;
 }
