@@ -1,4 +1,4 @@
-%h1
-    = @board.title
-%h1
-    = @board.content
+.container
+    - @boards.each do |board|
+        = render 'commons/board', board: board
+    

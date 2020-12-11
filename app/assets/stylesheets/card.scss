@@ -1,0 +1,41 @@
+@import './variables';
+
+$avatar-size: 32px;
+
+.card {
+  background-color: #F4F4F4;
+  margin: 16px 0;
+  padding: 10px;
+  cursor: pointer;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 5%;
+
+  &_title {
+    font-size: 22px;
+    margin: 16px 16px;
+  }
+  
+  &_content {
+    padding: 16px 16px;
+    
+    &_detail {
+        margin-bottom: 10px;
+        cursor: pointer;
+        display: block;
+        position: relative;
+        font-size: 14px;
+    }
+    img {
+        width: $avatar-size;
+        height: $avatar-size;
+        border-radius: 100%;
+        margin-right: 8px;
+        margin-top: 18px;
+    }
+    
+    p {
+        font-size: 10px;
+    }
+  }
+}
+ 

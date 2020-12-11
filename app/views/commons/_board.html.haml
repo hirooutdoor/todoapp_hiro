@@ -1,0 +1,11 @@
+= link_to board_path(board) do        
+    .card
+        .card_title
+            = board.title
+        .card_content
+            .card_detail
+                = board.content
+            = image_tag 'avatar.jpg'
+            %div
+                %p hirohiro
+                %p 2020/12/11
