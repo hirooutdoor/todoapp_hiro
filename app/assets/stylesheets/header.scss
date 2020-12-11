@@ -1,8 +1,15 @@
-header {
+@import 'variables';
+
+$avatar-size: 40px;
+$header-padding-y: 16px;
+$back-icon-size: 16px;
+
+
+.header {
     border-bottom: 1px solid #c5c1c1;
     p {
         font-size: 20px;
         margin: 15px 20px;
-        padding-top: 10px;
+        // padding-top: 10px;
     }
 }  
