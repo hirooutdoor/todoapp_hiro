@@ -1,4 +1,6 @@
 .container
     - @boards.each do |board|
         = render 'commons/board', board: board
-    
+    = link_to new_board_path do
+        .new_btn
+            %p ＋ Add New Board

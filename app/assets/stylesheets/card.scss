@@ -3,6 +3,7 @@
 $avatar-size: 32px;
 
 .card {
+    
   background-color: #F4F4F4;
   margin: 16px 20px;
   padding: 8px;
@@ -10,10 +11,27 @@ $avatar-size: 32px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
   border-radius: 5%;
 
-  &_title {
-    font-size: 18px;
-    margin: 8px 16px;
-  }
+  &_tab{
+
+      
+    &_title {
+        display: inline-block;
+        font-size: 18px;
+        margin: 8px 16px;
+        width: 80%;
+        max-height: 20px;
+        overflow: hidden; 
+        }
+    
+    &_dropdown {
+        right: 20px;
+        width:20%;
+        margin: 8px 0px;
+        display: inline-block;
+        position: absolute;
+        }
+    
+    }
   
   &_content {
     padding: 8px 16px;

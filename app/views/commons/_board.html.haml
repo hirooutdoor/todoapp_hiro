@@ -1,7 +1,9 @@
 = link_to board_path(board) do        
     .card
-        .card_title
+        .card_tab_title
             = board.title
+        .card_tab_dropdown
+            = image_tag 'actions.svg', class: 'dropbtn'
         .card_content
             .card_detail
                 = board.content
