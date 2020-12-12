@@ -1,12 +1,15 @@
-= link_to board_path(board) do        
+= link_to board_path(board) do
     .card
         .card_tab_title
-            = board.title
+            = board.title 
         .card_tab_dropdown
             = image_tag 'actions.svg', class: 'dropbtn'
+            .card_tab_dropdown_content.mini
+                = link_to 'Edit', edit_board_path(board)
+                = link_to 'Delete', board_path(board), data: { method: 'delete', confirm: '本当に削除してもよろしいですか？' }
         .card_content
             .card_detail
-                = board.content
+                = board.content  
             = image_tag 'avatar.jpg'
             %div
                 %p hirohiro
