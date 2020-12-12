@@ -15,12 +15,13 @@
 }
 
 .btn-secondary {
-    background-color: white;
-    border: solid 1px $primary-color;
+    background-color: $primary-color;
+    border: none;
     width: 100%;
     text-align: center;
-    color: $primary-color;
+    color: white;
     padding: 16px 0;
     font-weight: bold;
+    border-radius: 10px;
   }
   
