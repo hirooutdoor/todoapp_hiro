@@ -13,6 +13,20 @@ class BoardsController < ApplicationController
     @board = Board.find(params[:id])
   end
 
+  def edit
+    @board = Board.find(params[:id])
+  end
+
+  def update
+    
+  end
+
+  def destroy
+    board = Board.find(params[:id])
+    board.destroy!
+    redirect_to root_path, notice: '削除に成功しました'
+  end
+
   def create
     @board = Board.new(board_params)
     if @board.save
