@@ -2,8 +2,11 @@
   %ul
     - board.errors.full_messages.each do |message|
       %li= message
-  %h2 New Board
-  = form_with(model: board, url:boards_path, method: 'post', local:true) do |f|
+  -if request.get?
+    %h2 New Board
+  -else
+    %h2 Edit Board
+  = form_with(model: board, local:true) do |f|
     %div
       = f.label :title, 'Name'
     %div
