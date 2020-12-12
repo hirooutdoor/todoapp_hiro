@@ -29,23 +29,7 @@ $avatar-size: 32px;
         margin: 8px 0px;
         display: inline-block;
         position: absolute;
-
-        &_content {
-            font-weight: normal;
-            display: none;
-            right: 0;
-            position: absolute;
-            background-color: white;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-            z-index: 1;
-          
-            &.mini {
-                min-width: 100px;
-            }
-          }
-        }
-    
+        }   
     }
   
   &_content {
@@ -60,6 +44,13 @@ $avatar-size: 32px;
     max-height: 40px;
     overflow: hidden;     
 }
+
+&_details {
+    display: block;
+    position: relative;
+    font-size: 14px;
+}
+
 img {
     width: $avatar-size;
     height: $avatar-size;
@@ -74,4 +65,36 @@ p {
     font-size: 10px;
 }
 }
- 
+
+.dropdown_content {
+    font-weight: normal;
+    // 表示されないのであえて消している
+    display: none;
+    right: 0;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  
+    &.mini {
+        min-width: 100px;
+        position: relative;
+    }
+}
+
+.dropdown_content a {
+    padding: 8px 16px;
+    text-decoration: none;
+    display: block;
+    color: $text-base-color;
+    position: relative;
+  }
+  
+  .dropdown_content a:hover {
+    background-color: white;
+  }
+  
+  .dropdown:hover .dropdown_content {
+    display: block;
+  }
