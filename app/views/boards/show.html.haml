@@ -1,7 +1,7 @@
 .card
-    .card_tab_title
-        = @board.title 
-    .card_tab_dropdown
+    .card_titles
+        = @board.title    
+    .dropdowns
         = image_tag 'actions.svg', class: 'dropbtn'
         .dropdown_content.mini
             = link_to 'Edit', edit_board_path(@board)
