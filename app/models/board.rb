@@ -7,4 +7,8 @@ class Board < ApplicationRecord
     validates :content, length: { minimum: 10, maximum: 3000 }
 
     belongs_to :user
+
+    def display_created_at
+        I18n.l(self.created_at, format: :default)
+    end
 end

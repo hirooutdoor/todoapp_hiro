@@ -13,5 +13,6 @@
                 = board.content  
             = image_tag 'avatar.jpg'
             %div
-                %p hirohiro
-                %p 2020/12/11
+                -if board.user.present?
+                    %p= board.user.display_name
+                %p= board.display_created_at
