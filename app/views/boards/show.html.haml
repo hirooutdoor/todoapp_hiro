@@ -1,11 +1,12 @@
 .card
     .card_titles
-        = @board.title    
-    .dropdowns
-        = image_tag 'actions.svg', class: 'dropbtn'
-        .dropdown_content.mini
-            = link_to 'Edit', edit_board_path(@board)
-            = link_to 'Delete', board_path(@board), data: { method: 'delete', confirm: '本当に削除してもよろしいですか？' }
+        = @board.title
+    -if user_signed_in?    
+        .dropdowns
+            = image_tag 'actions.svg', class: 'dropbtn'
+            .dropdown_content.mini
+                = link_to 'Edit', edit_board_path(@board)
+                = link_to 'Delete', board_path(@board), data: { method: 'delete', confirm: '本当に削除してもよろしいですか？' }
     .card_content
         .card_details
             = @board.content  
