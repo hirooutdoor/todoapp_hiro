@@ -18,7 +18,13 @@ class BoardsController < ApplicationController
   end
 
   def update
-    
+    @board = Board.find(params[:id])
+    if @board.update(board_params)
+      redirect_to board_path(@board), notice: '更新できました'
+    else
+      flash.now[:eroor] = '更新できませんでした'
+      render :new
+    end
   end
 
   def destroy
@@ -30,8 +36,9 @@ class BoardsController < ApplicationController
   def create
     @board = Board.new(board_params)
     if @board.save
-      redirect_to board_path(@board)
+      redirect_to board_path(@board), notice: '保存できました'
     else
+      flash.now[:error] = '保存できませんでした'
       render :new
     end
   end
