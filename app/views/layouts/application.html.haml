@@ -12,7 +12,12 @@
   %body
     %header.header
       .header_logos
-        %p BoardsApp
+        - if current_page?(root_path)
+          %p.header_pageTitle BoardsApp
+        - else
+          = link_to 'javascript:history.back()' do
+            %p.header_pageTitle
+              = link_to 'BoardsApp', root_path
       -if user_signed_in?
         .dropdown
           = image_tag 'avatar.jpg', class: 'header_avatar dropbtn'
