@@ -1,0 +1,9 @@
+= link_to task_path(task) do
+    %h2= board.title 
+    %p= board.content
+    .card
+        .card_title
+            = task.title 
+        .card_content
+            = task.content
+            
