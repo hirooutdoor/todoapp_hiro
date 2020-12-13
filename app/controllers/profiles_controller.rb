@@ -8,6 +8,8 @@ class ProfilesController < ApplicationController
     end
 
     def edit
+        @profile = current_user.build_profile
+        #has_oneの場合の書き方
     end
 
 end
