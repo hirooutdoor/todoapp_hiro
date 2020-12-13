@@ -1,9 +1,10 @@
-= link_to task_path(task) do
-    %h2= board.title 
-    %p= board.content
+= link_to board_task_path(task) do
     .card
         .card_title
             = task.title 
         .card_content
             = task.content
-            
+        = image_tag 'avatar.jpg'
+        %div
+            %p= board.author_name
+            %p= board.display_created_at
