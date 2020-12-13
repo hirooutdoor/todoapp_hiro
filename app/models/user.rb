@@ -15,6 +15,10 @@ class User < ApplicationRecord
     boards.exists?(id: board.id)    
   end
 
+  def has_written_t?(task)
+    tasks.exists?(id: task.id)    
+  end
+
   def display_name
     profile&.nickname || self.email.split('@').first
   end
@@ -26,6 +30,7 @@ class User < ApplicationRecord
   # def gender
   #   profile&.gender
   # end
+
 
   def prepare_profile
     profile || build_profile
