@@ -6,5 +6,5 @@ class Board < ApplicationRecord
     validates :content, presence: true
     validates :content, length: { minimum: 10, maximum: 3000 }
 
-    belongs_to :user
+    belongs_to :user, optional: true
 end
