@@ -11,7 +11,7 @@ class User < ApplicationRecord
 
   delegate :birthday, :age, :gender, to: :profile, allow_nil: true
 
-  def has_written?(board)
+  def has_written_b?(board)
     boards.exists?(id: board.id)    
   end
 
