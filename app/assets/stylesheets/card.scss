@@ -1,14 +1,32 @@
 @import './variables';
 
 $avatar-size: 32px;
+$container-padding: 12px;
 
 .card {
     background-color: #F4F4F4;
     margin: 16px 20px;
-    padding: 8px;
+    padding: $container-padding;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
     border-radius: 5%;
 
+    &_image {
+        height: 180px;
+        position: relative;
+        overflow: hidden;
+        margin: $container-padding $container-padding; 
+        border-radius: inherit;
+    
+        img {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+          width: 100%;
+        }
+      }
 
     &_title {
         display: inline-block;
@@ -51,6 +69,13 @@ $avatar-size: 32px;
         font-size: 14px;
     }
 
+    p {
+        display: inline-block;
+        font-size: 10px;
+    }
+}
+
+.avatar_image {
     img {
         width: $avatar-size;
         height: $avatar-size;
@@ -59,13 +84,7 @@ $avatar-size: 32px;
         margin-top: 8px;
         display: flex;
     }
-
-    p {
-        display: inline-block;
-        font-size: 10px;
-    }
 }
-
 
 .dropdowns {
     right: 20px;
