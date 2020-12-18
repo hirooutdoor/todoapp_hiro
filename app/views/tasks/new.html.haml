@@ -5,7 +5,11 @@
     %h2 New Card
   = form_with(model: @task, url: board_tasks_path, method: 'post', local:true) do |f|
     %div
-      = f.label :title, 'Name'
+      = f.label :eyecatch, 'Choose Image', class: 'image_input_btn'
+    %div
+      = f.file_field :eyecatch, class: 'image_form'
+    %div
+      = f.label :title, 'Title'
     %div
       = f.text_field :title, class: 'text'
     %div
