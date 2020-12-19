@@ -13,6 +13,9 @@
     .card_content
         .card_details
             = @task.content
+            .deadline
+                %p Deadline
+                = @task.deadline
         .avatar_image
             = image_tag current_user.avatar_image
         %div
