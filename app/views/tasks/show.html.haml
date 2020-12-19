@@ -1,23 +1,27 @@
-.card
-    -if @task.eyecatch&.attached?
-        .card_image
-            = image_tag @task.eyecatch
-    .card_titles
-        = @task.title
-    -if user_signed_in? && current_user.has_written_t?(@task) 
-        .dropdowns
-            = image_tag 'actions.svg', class: 'dropbtn'
-            .dropdown_content.mini
-                = link_to 'Edit', edit_board_task_path(board_id: @board.id, id: @task.id)
-                = link_to 'Delete', board_task_path(board_id: @board.id, id: @task.id), data: { method: 'delete', confirm: '本当に削除してもよろしいですか？' }
-    .card_content
-        .card_details
-            = @task.content
-            .deadline
-                %p Deadline
-                = @task.deadline
-        .avatar_image
-            = image_tag current_user.avatar_image
-        %div
-            %p= @task.author_name
-            %p= @task.display_created_at
+.container
+    .card
+        -if @task.eyecatch&.attached?
+            .card_image
+                = image_tag @task.eyecatch
+        .card_titles
+            = @task.title
+        -if user_signed_in? && current_user.has_written_t?(@task) 
+            .dropdowns
+                = image_tag 'actions.svg', class: 'dropbtn'
+                .dropdown_content.mini
+                    = link_to 'Edit', edit_board_task_path(board_id: @board.id, id: @task.id)
+                    = link_to 'Delete', board_task_path(board_id: @board.id, id: @task.id), data: { method: 'delete', confirm: '本当に削除してもよろしいですか？' }
+        .card_content
+            .card_details
+                = @task.content
+                .deadline
+                    %p Deadline
+                    = @task.deadline
+            .avatar_image
+                = image_tag current_user.avatar_image
+            %div
+                %p= @task.author_name
+                %p= @task.display_created_at
+    = link_to new_board_task_comment_path(task_id: @task.id) do
+        .new_btn
+            %p ＋ Add New Comment 
