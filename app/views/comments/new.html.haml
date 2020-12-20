@@ -2,8 +2,8 @@
     %ul
         - @comment.errors.full_messages.each do |message|
             %li= message
-    %h2 New Ccomment
-    = form_with(model: @comment, url: board_task_comments_path(@comment.task), local: true) do |f|
+    %h2 New Comment
+    = form_with(model: @comment, url: board_task_comments_path(board_id:@board.id, task_id: @task.id), local: true) do |f|
         %div
             = f.label :comment, 'Contents'
         %div
