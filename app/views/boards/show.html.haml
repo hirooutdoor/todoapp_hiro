@@ -18,13 +18,18 @@
                 .card_content
                     = task.content
                     .deadline
-                        %p Deadline
-                        = task.deadline
+                        %i.fa.fa-hourglass-end
+                        %p= task.deadline
                 .avatar_image
                     = image_tag task.user.avatar_image
-                %div
-                    %p= task.author_name
-                    %p= task.display_created_at
+                .card_detail
+                    .card_detail_info
+                        %p= task.author_name
+                        %p= task.display_created_at
+                    .card_detail_count
+                        %i.fa.fa-commenting-o
+                        %span= task.comments_count
+
     = link_to new_board_task_path(@board) do
         .new_btn
             %p ＋ Add New Card
