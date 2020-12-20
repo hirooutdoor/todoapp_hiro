@@ -13,5 +13,9 @@ class Task < ApplicationRecord
     def display_created_at
         I18n.l(self.created_at, format: :default)
     end
+    
+    def comments_count
+        comments.count
+    end
 
 end

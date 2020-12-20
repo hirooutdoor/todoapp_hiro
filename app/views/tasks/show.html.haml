@@ -14,12 +14,12 @@
         .card_content
             .card_details
                 = @task.content
-                .deadline
-                    %p Deadline
-                    = @task.deadline
+            .deadline
+                %i.fa.fa-hourglass-end
+                %p= @task.deadline
             .avatar_image
                 = image_tag @task.user.avatar_image
-            %div
+            .card_detail_info
                 %p= @task.author_name
                 %p= @task.display_created_at
     .comment
