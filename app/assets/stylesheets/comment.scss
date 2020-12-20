@@ -1,0 +1,47 @@
+@import './variables';
+
+$avatar-size: 32px;
+$container-margin: 16px;
+
+.comment {
+    
+    &_list {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        margin: $container-margin;
+    }
+
+    &_avatar{
+        display: inline-flex;
+        width: 20% ;
+
+        img {
+        width: $avatar-size;
+        height: $avatar-size;
+        border-radius: 100%;
+        margin: ($avatar-size - $back-icon-size) / 2 8px 0;
+        margin-right: 4px;
+        }
+    }
+
+    &_area {
+        display: inline-flex;
+        width: 70% ;
+        margin: $container-margin 0px;
+
+    }
+
+}
+
+.new_comment_btn {
+    width: 92%;
+    height: 80px;
+    margin: 16px 16px;
+    padding: 30px 10px 10px 10px;
+    border-radius: 5%;
+    text-align: center;
+    border: 1px dashed rgba(0, 0, 0, 0.2);
+    color: black;
+    cursor: pointer; 
+}
