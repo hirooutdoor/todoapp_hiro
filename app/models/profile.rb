@@ -14,4 +14,9 @@ class Profile < ApplicationRecord
             "#{years}歳"
         end
     end
+    
+    def gender
+        return '不明' unless gender.present?
+    end
+    
 end
